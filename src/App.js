@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import Card from "./Card";
 import SearchBar from "./SearchBar";
 import CardList from "./CardList";
 import Scroll from "./Scroll";
+import ErrorBoundary from "./ErrorBoundary";
 
 export default class App extends Component {
   constructor() {
@@ -26,7 +26,7 @@ export default class App extends Component {
       robo.name.toLowerCase().includes(searchValue.toLowerCase())
     );
     return (
-      <div>
+      <div className="Body">
         <div>
           <SearchBar
             searchStr={searchValue}
@@ -34,9 +34,11 @@ export default class App extends Component {
           />
         </div>
         <div>
-          <Scroll>
-            <CardList robotList={filteredRobots} />
-          </Scroll>
+          <ErrorBoundary>
+            <Scroll>
+              <CardList robotList={filteredRobots} />
+            </Scroll>
+          </ErrorBoundary>
         </div>
       </div>
     );

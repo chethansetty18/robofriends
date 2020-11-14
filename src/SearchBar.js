@@ -6,7 +6,12 @@ const SearchBar = (props) => {
   return (
     <div className="searchBar">
       <h1>ROBO FRIENDS</h1>
-      <input type="search" value={searchStr} onChange={props.onSearchChange} />
+      <input
+        type="search"
+        placeHolder="search"
+        value={searchStr}
+        onChange={props.onSearchChange}
+      />
     </div>
   );
 };
