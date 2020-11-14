@@ -1,0 +1,25 @@
+.Card {
+  background-color: green;
+  height: 400px;
+  width: 300px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+  margin: 5px;
+}
+.data {
+  margin-top: 50px;
+  text-align: center;
+  background-color: blanchedalmond;
+}
+h4 {
+  margin: 2px;
+}
+img {
+  height: 200px;
+  width: 200px;
+}
+.Card:hover {
+  transform: scale(1.02);
+}
