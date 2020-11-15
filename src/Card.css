@@ -7,6 +7,8 @@
   border-radius: 10px;
   transition: 0.3s;
   margin: 5px;
+  justify-content: center;
+  box-shadow: 3px 3px 3px black;
 }
 .data {
   margin-top: 50px;
@@ -19,7 +21,28 @@ h4 {
 img {
   height: 200px;
   width: 200px;
+  z-index: 2;
 }
 .Card:hover {
   transform: scale(1.02);
+}
+
+.photoBack {
+  width: 250px;
+  height: 250px;
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  z-index: 1;
+}
+
+.photoHold {
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+}
+.top {
+  display: flex;
+  justify-content: center;
 }

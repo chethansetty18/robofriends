@@ -8,7 +8,7 @@ const SearchBar = (props) => {
       <h1>ROBO FRIENDS</h1>
       <input
         type="search"
-        placeHolder="search"
+        placeholder="search"
         value={searchStr}
         onChange={props.onSearchChange}
       />
