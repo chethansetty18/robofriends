@@ -23,7 +23,8 @@ export default class App extends Component {
   render() {
     const { searchValue, robots } = this.state;
     const filteredRobots = robots.filter((robo) =>
-      robo.name.toLowerCase().includes(searchValue.toLowerCase())
+      robo.name.toLowerCase().includes(searchValue.toLowerCase()) || 
+      robo.email.toLowerCase().includes(searchValue.toLowerCase()
     );
     return (
       <div className="Body">
