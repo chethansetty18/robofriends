@@ -5,10 +5,10 @@
   border: 1px solid black;
   text-align: center;
   border-radius: 10px;
-  transition: 0.3s;
   margin: 5px;
   justify-content: center;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 3px black, 3px 3px 15px black;
+  perspective: 10px;
 }
 .data {
   margin-top: 50px;
@@ -22,9 +22,7 @@ img {
   height: 200px;
   width: 200px;
   z-index: 2;
-}
-.Card:hover {
-  transform: scale(1.02);
+  transition: all 0.75s ease-out;
 }
 
 .photoBack {

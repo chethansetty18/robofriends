@@ -2,11 +2,17 @@ import React from "react";
 import "./Card.css";
 
 class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  handleMouseMove = (event) => {
+    let targetNode = event.currentTarget;
+    let imgNode = targetNode.firstChild.firstChild.firstChild.firstChild;
+    imgNode.style.transform = "translateZ(2px)";
+  };
 
-  handleMouseEnter = (event) => {};
+  handleMouseOut = (event) => {
+    let targetNode = event.currentTarget;
+    let imgNode = targetNode.firstChild.firstChild.firstChild.firstChild;
+    imgNode.style.transform = "translateZ(0px)";
+  };
   render() {
     const name = this.props.name;
     const email = this.props.email;
@@ -14,7 +20,11 @@ class Card extends React.Component {
     const url = `https://robohash.org/${userName}?100x100`;
 
     return (
-      <div className="Card" onMouseEnter={this.handleMouseEnter}>
+      <div
+        className="Card"
+        onMouseMove={this.handleMouseMove}
+        onMouseOut={this.handleMouseOut}
+      >
         <div className="top">
           <div className="photoBack">
             <div className="photoHold">
